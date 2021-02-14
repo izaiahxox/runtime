@@ -21,3 +21,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Code:adb shell su -c "dd if=/dev/block/mmcblk0boot0 of=/sdcard/boot0block.img"adb shell su -c "dd if=/dev/block/platform/omap/omap_hsmmc.1/by-name/boot of=/sdcard/stock-boot.img"adb shell su -c "dd if=/dev/block/platform/omap/omap_hsmmc.1/by-name/recovery of=/sdcard/stock-recovery.img"adb shell su -c "dd if=/dev/block/platform/omap/omap_hsmmc.1/by-name/system of=/sdcard/stock-system.img" # This will take a few minutesadb pull /sdcard/boot0block.imgadb pull /sdcard/stock-boot.imgadb pull /sdcard/stock-recovery.imgadb pull /sdcard/stock-system.img #
